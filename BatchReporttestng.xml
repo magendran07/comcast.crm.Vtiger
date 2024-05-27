@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Suite">
+	<listeners>
+		<listener class-name="com.comcast.crm.listnerUtility.listIMPPages"></listener>
+	</listeners>
+  <test thread-count="5" parallel="tests" name="Test">
+    <classes>
+      <class name="com.comcast.crm.Verification.loginAndVerification"/>
+      <class name="com.comcast.crm.Verification.loginSoftAssert"/>
+      <class name="com.comcast.crm.LoginTest.loginModule"/>
+      <class name="com.comcast.crm.ExtentReport.LoginTOApplicationReport"/>
+      <class name="com.comcast.crm.createLead.createLead"/>
+      <class name="com.comcast.crm.createOrg.createAndDelete"/>
+      <class name="com.comcast.crm.createOrg.createOrganizationRandomName"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
