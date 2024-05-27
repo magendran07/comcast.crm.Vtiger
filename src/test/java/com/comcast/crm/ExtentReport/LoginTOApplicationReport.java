@@ -25,18 +25,17 @@ public class LoginTOApplicationReport extends BaseClass {
 		}
 		
 	}
-//	@Test(groups = "SmokeTest")
-//	public void createContact() {
-//		listIMPPages.test.log(Status.INFO, "login to app");
-//		listIMPPages.test.log(Status.PASS, "Navigate to ContactPage");
-//		TakesScreenshot screen=(TakesScreenshot)driver;
-//		String  path =screen.getScreenshotAs(OutputType.BASE64);
-//		if("Home".equals("HMe")) {
-//			listIMPPages.test.log(Status.PASS,"contact created  successfull");
-//		}
-//		else {
-//			listIMPPages.test.addScreenCaptureFromBase64String(path, "Failed");
-//			listIMPPages.test.log(Status.FAIL," failed to create A Contact");
-//		}
+	@Test(groups = "SmokeTest")
+	public void createContact() {
+	listIMPPages.test.log(Status.INFO, "login to app");
+		listIMPPages.test.log(Status.PASS, "Navigate to ContactPage");
+		TakesScreenshot screen=(TakesScreenshot)driver;
+	String  path =screen.getScreenshotAs(OutputType.BASE64);
+	if("Home".equals("HMe")) {
+			listIMPPages.test.log(Status.PASS,"contact created  successfull");
+		}
+		else {
+			listIMPPages.test.addScreenCaptureFromBase64String(path, "Failed");
+		listIMPPages.test.log(Status.FAIL," failed to create A Contact");	}
 	}
-
+}
