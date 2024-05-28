@@ -55,7 +55,7 @@ public class BaseClassTest{
 			sdriver=driver;
 	}
 	
-	@BeforeMethod(alwaysRun = true)
+	@BeforeClass(alwaysRun = true)
 	public void configSection() throws Throwable {
 				//loginto Application
 		String userid =  file.getDataFormPropertyFile("username");

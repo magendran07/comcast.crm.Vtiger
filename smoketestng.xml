@@ -10,13 +10,13 @@
 	</listeners>
   <test thread-count="5" parallel="tests" name="Test">
     <classes>
-      <class name="com.comcast.crm.Verification.loginAndVerification"/>
-      <class name="com.comcast.crm.Verification.loginSoftAssert"/>
-      <class name="com.comcast.crm.LoginTest.loginModule"/>
-      <class name="com.comcast.crm.ExtentReport.LoginTOApplicationReport"/>
-      <class name="com.comcast.crm.createLead.createLead"/>
-      <class name="com.comcast.crm.createOrg.createAndDelete"/>
-      <class name="com.comcast.crm.createOrg.createOrganizationRandomName"/>
+      <class name="com.comcast.crm.Verification.loginAndVerificationTest"/>
+      <class name="com.comcast.crm.Verification.loginSoftAssertTest"/>
+      <class name="com.comcast.crm.LoginTest.loginModuleTest"/>
+      <class name="com.comcast.crm.ExtentReport.LoginTOApplicationReportTest"/>
+      <class name="com.comcast.crm.createLead.createLeadTest"/>
+      <class name="com.comcast.crm.createOrg.createAndDeleteTest"/>
+      <class name="com.comcast.crm.createOrg.createOrganizationRandomNameTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

@@ -3,7 +3,7 @@
 <suite name="Suite">
 	<listeners>
 		<listener
-			class-name="com.comcast.crm.listenerUtility.listIMPPages"></listener>
+			class-name="com.comcast.crm.listenerUtility.listIMPPagesTest"></listener>
 	</listeners>
   <test thread-count="5" name="Test">
 	<classes>
