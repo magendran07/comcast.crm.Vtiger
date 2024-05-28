@@ -11,7 +11,7 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 
-public class excelDataUtility {
+public class excelDataUtilityTest {
 public 	static String username;
 	 public static String password;
 	 

@@ -13,8 +13,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
-import com.comcast.crm.generic.fileutility.fileutility;
-import com.comcast.crm.objectepositoryuitlity.loginPage;
+import com.comcast.crm.generic.fileutility.fileutilityTest;
+import com.comcast.crm.objectepositoryuitlity.loginPageTest;
 
 import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.Reporter;
@@ -25,10 +25,10 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
-public class BaseClass{
+public class BaseClassTest{
 	public WebDriver driver;
 	public static WebDriver sdriver;
-	public fileutility file=new fileutility();
+	public fileutilityTest file=new fileutilityTest();
 
 	@BeforeClass(alwaysRun = true)
 	public void configBC() throws Throwable {
@@ -62,7 +62,7 @@ public class BaseClass{
 		String passkey = file.getDataFormPropertyFile("password");
 		System.out.println(userid);
 		System.out.println(passkey);
-		loginPage lp=new loginPage(driver);
+		loginPageTest lp=new loginPageTest(driver);
 		lp.loginTOCRm(userid, passkey);
 	}
 

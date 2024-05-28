@@ -19,7 +19,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.mysql.jdbc.Driver;
 
-public class webDriverUtility {
+public class webDriverUtilityTest {
 
 	public static void clickOnElement(WebDriver driver,WebElement element) {
 	element.click();

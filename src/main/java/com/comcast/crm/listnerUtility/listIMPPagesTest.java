@@ -19,21 +19,21 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
-import com.comcast.crm.generic.fileutility.fileutility;
 
-import baseUtitlity.BaseClass;
+import com.comcast.crm.generic.fileutility.fileutilityTest;
+import baseUtitlity.BaseClassTest;
 /**
  * Author Name: Magendran P
  * This Class contains the Listner class for both Suite and Script Level
  */
-public class listIMPPages implements ITestListener,ISuiteListener{
+public class listIMPPagesTest implements ITestListener,ISuiteListener{
 	public static ExtentReports reports;
 	public static ExtentTest test;
 	@Override
 	public void onStart(ISuite suite) {
 		// TODO Auto-generated method stub
 		ISuiteListener.super.onStart(suite);
-	fileutility file=new fileutility();
+	fileutilityTest file=new fileutilityTest();
 	String time=new Date().toString().replace(" ", "_").replace(":", "_");
 			ExtentSparkReporter spark=new ExtentSparkReporter("./ExtentReport/Report"+time+".html");
 			spark.config().setDocumentTitle("Login to Application");
@@ -79,7 +79,7 @@ public class listIMPPages implements ITestListener,ISuiteListener{
 		String testcaseName=result.getMethod().getMethodName();
 		
 		String time=new Date().toString().replace(" ", "_").replace(":", "_");
-		TakesScreenshot edriver=(TakesScreenshot) BaseClass.sdriver;
+		TakesScreenshot edriver=(TakesScreenshot) BaseClassTest.sdriver;
 		String src= edriver.getScreenshotAs(OutputType.BASE64);
 	test.addScreenCaptureFromBase64String(src, "./testdata/"+testcaseName+""+time+".png");
 		

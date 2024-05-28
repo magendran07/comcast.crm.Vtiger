@@ -5,17 +5,18 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-import com.comcast.crm.generic.webdriver.utility.webDriverUtility;
-import com.comcast.crm.objectepositoryuitlity.loginAndVerificationpage;
 
-import baseUtitlity.BaseClass;
-@Listeners(com.comcast.crm.listnerUtility.listIMPPages.class)
-public class loginSoftAssertTest extends BaseClass {
+import com.comcast.crm.generic.webdriver.utility.webDriverUtilityTest;
+
+import com.comcast.crm.objectepositoryuitlity.loginAndVerificationpageTest;
+import baseUtitlity.BaseClassTest;
+@Listeners(com.comcast.crm.listnerUtility.listIMPPagesTest.class)
+public class loginSoftAssertTest extends BaseClassTest {
 	@Test
 	public void loginSoft() {
-		webDriverUtility utility=new webDriverUtility();
+		webDriverUtilityTest utility=new webDriverUtilityTest();
 		utility.implicitywait(20, driver);
-		loginAndVerificationpage lop=new loginAndVerificationpage(driver);
+		loginAndVerificationpageTest lop=new loginAndVerificationpageTest(driver);
 		String name=	lop.headerVerification();
 		SoftAssert soft=new SoftAssert();
 		soft.assertEquals(" ", name);	

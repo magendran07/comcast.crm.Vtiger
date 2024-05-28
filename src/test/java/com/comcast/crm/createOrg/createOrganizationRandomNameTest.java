@@ -4,24 +4,26 @@ import java.io.IOException;
 
 import org.testng.annotations.Test;
 
-import com.comcast.crm.generic.fileutility.fileutility;
-import com.comcast.crm.generic.webdriver.utility.webDriverUtility;
-import com.comcast.crm.javaUtility.javaUtility;
-import com.comcast.crm.objectepositoryuitlity.createOrg;
 
-import baseUtitlity.BaseClass;
+import com.comcast.crm.generic.fileutility.fileutilityTest;
 
-public class createOrganizationRandomNameTest extends BaseClass{
+import com.comcast.crm.generic.webdriver.utility.webDriverUtilityTest;
+import com.comcast.crm.javaUtility.javaUtilityTest;
+
+import com.comcast.crm.objectepositoryuitlity.createOrgTest;
+import baseUtitlity.BaseClassTest;
+
+public class createOrganizationRandomNameTest extends BaseClassTest{
 	
 	@Test(groups = "RegressionTest")
 	public void createOrganization() throws IOException {
-		createOrg cop=new createOrg(driver);
-		webDriverUtility implicitwait=new webDriverUtility();
+		createOrgTest cop=new createOrgTest(driver);
+		webDriverUtilityTest implicitwait=new webDriverUtilityTest();
 		implicitwait.implicitywait(20, driver);
 		cop.navigateToOrganization();
 		cop.createOrganization();
-		javaUtility file=new javaUtility();
-		fileutility orgName=new fileutility();
+		javaUtilityTest file=new javaUtilityTest();
+		fileutilityTest orgName=new fileutilityTest();
 		String fetchName=orgName.getDataFormPropertyFile("headerName");
 		String name=fetchName+file.randomNumber();
 		cop.organizationName(name);

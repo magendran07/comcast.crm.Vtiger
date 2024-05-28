@@ -10,7 +10,7 @@ import com.mysql.cj.jdbc.Driver;
 
 
 
-public class databaseUtility {
+public class databaseUtilityTest {
  Connection con;
 	 static ResultSet result = null;
 	

@@ -7,11 +7,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
-import baseUtitlity.BaseClass;
-
-public class createDeleteTheOrganization {
+public class createDeleteTheOrganizationTest {
 	  WebDriver driver;
-	  public createDeleteTheOrganization(WebDriver driver)
+	  public createDeleteTheOrganizationTest(WebDriver driver)
 	  {
 		  this.driver=driver;
 		  PageFactory.initElements(driver,this);

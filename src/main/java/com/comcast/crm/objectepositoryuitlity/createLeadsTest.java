@@ -6,12 +6,13 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.PageFactoryFinder;
 
-import com.comcast.crm.generic.webdriver.utility.webDriverUtility;
+import com.comcast.crm.generic.webdriver.utility.webDriverUtilityTest;
 
-public class createLeads {
+
+public class createLeadsTest {
 	
 public	WebDriver driver;
-	public createLeads(WebDriver driver) {
+	public createLeadsTest(WebDriver driver) {
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
 	}
@@ -37,7 +38,7 @@ public	WebDriver driver;
 		company.sendKeys(name);
 	}
 	public void leadSources() {
-		webDriverUtility utility=new webDriverUtility();
+		webDriverUtilityTest utility=new webDriverUtilityTest();
 		utility.selectByID(leadSource, 2);
 	}
 	public void lastname(String name) {

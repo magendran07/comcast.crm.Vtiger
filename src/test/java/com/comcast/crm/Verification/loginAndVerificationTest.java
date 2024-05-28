@@ -3,17 +3,16 @@ package com.comcast.crm.Verification;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import com.comcast.crm.generic.webdriver.utility.webDriverUtilityTest;
+import com.comcast.crm.objectepositoryuitlity.loginAndVerificationpageTest;
+import baseUtitlity.BaseClassTest;
 
-import com.comcast.crm.generic.webdriver.utility.webDriverUtility;
-import com.comcast.crm.objectepositoryuitlity.loginAndVerificationpage;
-
-import baseUtitlity.BaseClass;
-
-public class loginAndVerificationTest  extends BaseClass{
+public class loginAndVerificationTest  extends BaseClassTest{
 	@Test
 	public void loginpageVerification() {
-		loginAndVerificationpage lop=new loginAndVerificationpage(driver);
-		webDriverUtility utility=new webDriverUtility();
+		loginAndVerificationpageTest lop=new loginAndVerificationpageTest
+				(driver);
+		webDriverUtilityTest utility=new webDriverUtilityTest();
 		utility.implicitywait(20, driver);
 	boolean flag=lop.headerText();
 	Assert.assertEquals(flag, true);

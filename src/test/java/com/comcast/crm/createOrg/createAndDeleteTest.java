@@ -8,27 +8,30 @@ import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
+import com.comcast.crm.excelUtility.excelDataUtilityTest;
 
-import com.comcast.crm.excelUtility.excelDataUtility;
-import com.comcast.crm.generic.fileutility.fileutility;
-import com.comcast.crm.generic.webdriver.utility.webDriverUtility;
-import com.comcast.crm.javaUtility.javaUtility;
-import com.comcast.crm.objectepositoryuitlity.createDeleteTheOrganization;
-import com.comcast.crm.objectepositoryuitlity.createOrg;
+import com.comcast.crm.generic.fileutility.fileutilityTest;
 
-import baseUtitlity.BaseClass;
+import com.comcast.crm.generic.webdriver.utility.webDriverUtilityTest;
 
-public class createAndDeleteTest  extends BaseClass{
+import com.comcast.crm.javaUtility.javaUtilityTest;
+
+import com.comcast.crm.objectepositoryuitlity.createDeleteTheOrganizationTest;
+
+import com.comcast.crm.objectepositoryuitlity.createOrgTest;
+import baseUtitlity.BaseClassTest;
+
+public class createAndDeleteTest  extends BaseClassTest{
 public static	String name;
 	@Test(groups = "SmokeTest")
 	public void createOrg() throws IOException, InterruptedException {
-		createOrg cop=new createOrg(driver);
-		webDriverUtility implicitwait=new webDriverUtility();
+		createOrgTest cop=new createOrgTest(driver);
+		webDriverUtilityTest implicitwait=new webDriverUtilityTest();
 		implicitwait.implicitywait(20, driver);
 		cop.navigateToOrganization();
 		cop.createOrganization();
-		javaUtility file=new javaUtility();
-		fileutility orgName=new fileutility();
+		javaUtilityTest file=new javaUtilityTest();
+		fileutilityTest orgName=new fileutilityTest();
 		String fetchName=orgName.getDataFormPropertyFile("headerName");
 	name=fetchName+file.randomNumber();
 		cop.organizationName(name);
@@ -37,10 +40,10 @@ public static	String name;
 	}
 	@AfterMethod
 	public void deleteOrg() throws InterruptedException {
-		webDriverUtility utility=new webDriverUtility();
+		webDriverUtilityTest utility=new webDriverUtilityTest();
 		Thread.sleep(2000);
 		//utility.implicitywait(40, driver);
-		createDeleteTheOrganization cod=new createDeleteTheOrganization(driver);
+		createDeleteTheOrganizationTest cod=new createDeleteTheOrganizationTest(driver);
 		cod.navigateToOrganization();
 		cod.deleteButton(name);
 		utility.handleAlert(driver);	
@@ -48,7 +51,7 @@ public static	String name;
 	@AfterClass
 	public void writeBackEXcel() throws IOException {
 		
-		excelDataUtility data=new excelDataUtility();
+		excelDataUtilityTest data=new excelDataUtilityTest();
 		Assert.assertEquals(name, name);
 		data.writeBackData(name);
 		

@@ -11,16 +11,14 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
-
-
-import com.comcast.crm.generic.fileutility.fileutility;
+import com.comcast.crm.generic.fileutility.fileutilityTest;
 /**
  * Author Name :Magendran 
   Purpose :This Class contains the  date and randomNumber Generation commands;
  
  **/
 
-public class javaUtility {
+public class javaUtilityTest {
 
 	public void getSystemData() {
 		Date date=new Date();
@@ -32,7 +30,7 @@ public class javaUtility {
 		
 	}
 	public static String randomNumber() throws IOException {
-		fileutility file=new fileutility();
+		fileutilityTest file=new fileutilityTest();
 		String name=file.getDataFormPropertyFile("headerName");
 		Random rand=new Random();
 	String randomNumber=name+rand.nextInt();

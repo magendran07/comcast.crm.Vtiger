@@ -10,7 +10,7 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 
-public class fileutility {
+public class fileutilityTest {
 	public  static String getDataFormPropertyFile(String key) throws IOException {
 		FileInputStream fis=new FileInputStream("./configAppData/commonData.properties");
 		Properties pobj=new Properties();

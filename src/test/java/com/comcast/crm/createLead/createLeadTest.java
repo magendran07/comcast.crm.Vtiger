@@ -6,24 +6,23 @@ import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import com.comcast.crm.generic.webdriver.utility.webDriverUtility;
-import com.comcast.crm.javaUtility.javaUtility;
-import com.comcast.crm.listnerUtility.listIMPPages;
-import com.comcast.crm.objectepositoryuitlity.createLeads;
+import com.comcast.crm.generic.webdriver.utility.webDriverUtilityTest;
+import com.comcast.crm.javaUtility.javaUtilityTest;
+import com.comcast.crm.objectepositoryuitlity.createLeadsTest;
 
-import baseUtitlity.BaseClass;
+import baseUtitlity.BaseClassTest;
 
-public class createLeadTest  extends BaseClass{
+public class createLeadTest  extends BaseClassTest{
 
 	@Test(groups = "SmokeTest")
 	public void s() throws IOException, InterruptedException {
-	createLeads led=new createLeads(driver);
-	webDriverUtility access=new webDriverUtility();
+	createLeadsTest led=new createLeadsTest(driver);
+	webDriverUtilityTest access=new webDriverUtilityTest();
 	access.implicitywait(40, driver);
 	led.lead();
 	led.createLead();
 	Thread.sleep(2000);
-	javaUtility utility=new javaUtility();
+	javaUtilityTest utility=new javaUtilityTest();
 	String typeName=utility.randomNumber();
 	led.companyName(typeName);
 
