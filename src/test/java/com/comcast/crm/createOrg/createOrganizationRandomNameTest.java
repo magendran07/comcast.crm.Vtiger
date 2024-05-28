@@ -11,7 +11,7 @@ import com.comcast.crm.objectepositoryuitlity.createOrg;
 
 import baseUtitlity.BaseClass;
 
-public class createOrganizationRandomName extends BaseClass{
+public class createOrganizationRandomNameTest extends BaseClass{
 	
 	@Test(groups = "RegressionTest")
 	public void createOrganization() throws IOException {

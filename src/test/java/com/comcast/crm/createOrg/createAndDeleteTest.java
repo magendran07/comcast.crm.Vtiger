@@ -18,7 +18,7 @@ import com.comcast.crm.objectepositoryuitlity.createOrg;
 
 import baseUtitlity.BaseClass;
 
-public class createAndDelete  extends BaseClass{
+public class createAndDeleteTest  extends BaseClass{
 public static	String name;
 	@Test(groups = "SmokeTest")
 	public void createOrg() throws IOException, InterruptedException {

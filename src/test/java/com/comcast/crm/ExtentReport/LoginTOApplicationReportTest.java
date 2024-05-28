@@ -12,7 +12,7 @@ import com.comcast.crm.listnerUtility.listIMPPages;
 
 import baseUtitlity.BaseClass;
 @Listeners(com.comcast.crm.listnerUtility.listIMPPages.class)
-public class LoginTOApplicationReport extends BaseClass {
+public class LoginTOApplicationReportTest extends BaseClass {
 
 	@Test(groups = "RegressionTest")
 	public void  loginExtentReport() throws IOException {

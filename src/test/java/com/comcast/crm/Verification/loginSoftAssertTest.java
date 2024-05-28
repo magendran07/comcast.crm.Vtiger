@@ -10,7 +10,7 @@ import com.comcast.crm.objectepositoryuitlity.loginAndVerificationpage;
 
 import baseUtitlity.BaseClass;
 @Listeners(com.comcast.crm.listnerUtility.listIMPPages.class)
-public class loginSoftAssert extends BaseClass {
+public class loginSoftAssertTest extends BaseClass {
 	@Test
 	public void loginSoft() {
 		webDriverUtility utility=new webDriverUtility();

@@ -9,7 +9,7 @@ import com.comcast.crm.objectepositoryuitlity.loginAndVerificationpage;
 
 import baseUtitlity.BaseClass;
 
-public class loginAndVerification  extends BaseClass{
+public class loginAndVerificationTest  extends BaseClass{
 	@Test
 	public void loginpageVerification() {
 		loginAndVerificationpage lop=new loginAndVerificationpage(driver);

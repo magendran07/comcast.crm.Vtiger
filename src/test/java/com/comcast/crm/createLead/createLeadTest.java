@@ -13,7 +13,7 @@ import com.comcast.crm.objectepositoryuitlity.createLeads;
 
 import baseUtitlity.BaseClass;
 
-public class createLead  extends BaseClass{
+public class createLeadTest  extends BaseClass{
 
 	@Test(groups = "SmokeTest")
 	public void s() throws IOException, InterruptedException {

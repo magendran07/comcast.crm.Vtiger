@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 import com.comcast.crm.generic.fileutility.fileutility;
 import com.comcast.crm.objectepositoryuitlity.loginPage;
 
-public class loginModule {
+public class loginModuleTest {
 
 	@Test(groups = "RegressionTest")
 	public void loginINTOCRM() throws IOException{
