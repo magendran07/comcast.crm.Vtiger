@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
+<<<<<<< HEAD
 	<name>crm.vtigerTest</name>
+=======
+	<name>FrameWorkMethod</name>
+>>>>>>> branch 'master' of https://github.com/magendran07/comcast.crm.Vtiger.git
 	<comment></comment>
 	<projects>
 	</projects>

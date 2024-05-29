@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<groups>
+		<run>
+			<include name="SmokeTest"/></run>
+	</groups>
+	<listeners>
+		<listener class-name="com.comcast.crm.listnerUtility.listIMPPages"></listener>
+	</listeners>
+  <test thread-count="5" parallel="tests" name="Test">
+    <classes>
+      <class name="com.comcast.crm.Verification.loginAndVerificationTest"/>
+      <class name="com.comcast.crm.Verification.loginSoftAssertTest"/>
+      <class name="com.comcast.crm.LoginTest.loginModuleTest"/>
+      <class name="com.comcast.crm.ExtentReport.LoginTOApplicationReportTest"/>
+      <class name="com.comcast.crm.createLead.createLeadTest"/>
+      <class name="com.comcast.crm.createOrg.createAndDeleteTest"/>
+      <class name="com.comcast.crm.createOrg.createOrganizationRandomNameTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
